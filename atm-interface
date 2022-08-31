@@ -1,0 +1,87 @@
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+int balance=0;
+int deposite=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter your name :");
+String name=sc.nextLine();
+System.out.println("Welcome "+name);
+System.out.println("Enter your account number :");
+int acc=sc.nextInt();
+int bank=1;
+while(bank==1)
+{
+System.out.println("1 ICICI Bank");
+System.out.println("2 AXIS Bank");
+System.out.println("3 STATE Bank");
+System.out.println("4 HDFC Bank");
+int bak=sc.nextInt();
+switch(bak)
+{
+case 1:
+System.out.println("Welcome In Icici Bank");
+break;
+case 2:
+System.out.println("Welcome In Axis Bank");
+break;
+case 3:
+System.out.println("Welcome In State Bank");
+break;
+case 4:
+System.out.println("Welcome In Hdfc Bank");
+break;
+}
+break;
+}
+int a=1;
+while(a==1)
+{
+System.out.println("******************");
+System.out.println("1 Deposite");
+System.out.println("2 Withdraw");
+System.out.println("3 Balance");
+System.out.println("4 Exit");
+System.out.println("******************");
+System.out.println("Enter the choice");
+int ch=sc.nextInt();
+if(ch==1)
+{
+System.out.println("Enter the amount to deposite :");
+deposite=sc.nextInt();
+System.out.println("Successfully Deposited");
+}
+else if(ch==2)
+{
+
+System.out.println("Enter amount of withdraw :");
+int withdraw=sc.nextInt();
+if(withdraw>deposite)
+{
+
+System.out.println("Withdraw failed ....,Check your account balance");
+}
+else
+{
+balance=balance-withdraw;
+System.out.println("Withdraw Successful");
+}
+}
+else if(ch==3)
+{
+
+System.out.println("Your Balance Is :"+balance);
+
+}
+else if(ch==4)
+{
+System.out.println("Thank you "+name);
+break;
+}
+else
+{
+
+}
+}
+}
+}
